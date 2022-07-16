@@ -24,14 +24,11 @@ namespace JuniorHomeWork
                 Console.WriteLine();
             }
 
-            for (int i = 0; i <= 1; i++)
+            for (int i = 1; i <= 1; i++)
             {
                 for (int j = 0; j < numbers.GetLength(1); j++)
                 {
-                    if (i == 1)
-                    {
-                        sumSecondRow += numbers[i, j];
-                    }
+                    sumSecondRow += numbers[i, j];
                 }
             }
 
