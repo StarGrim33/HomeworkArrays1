@@ -24,16 +24,21 @@ namespace JuniorHomeWork
                 Console.WriteLine();
             }
 
-            for (int i = 0; i < numbers.GetLength(0); i++)
+            for (int i = 0; i <= 1; i++)
             {
                 for (int j = 0; j < numbers.GetLength(1); j++)
                 {
-
                     if (i == 1)
                     {
                         sumSecondRow += numbers[i, j];
                     }
+                }
+            }
 
+            for (int i = 0; i < numbers.GetLength(0); i++)
+            {
+                for (int j = 0; j < 1; j++)
+                {
                     if (j == 0)
                     {
                         multiplication *= numbers[i, j];
@@ -45,3 +50,4 @@ namespace JuniorHomeWork
         }
     }
 }
+
