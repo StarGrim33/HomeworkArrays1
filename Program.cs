@@ -6,9 +6,9 @@ namespace JuniorHomeWork
         static void Main(string[] args)
         {
             Random random = new Random();
-            int column = random.Next(1, 10);
+            int columns = random.Next(1, 10);
             int rows = random.Next(1, 10);
-            int[,] numbers = new int[rows, column];
+            int[,] numbers = new int[rows, columns];
             int sumSecondRow = 0;
             int multiplication = 1;
             int minValue = 0;
@@ -26,28 +26,21 @@ namespace JuniorHomeWork
 
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
-                while (i == 1)
+                for (int j = 0; j < numbers.GetLength(1); j++)
                 {
-                    for (int j = 0; j < numbers.GetLength(1); j++)
+
+                    if (i == 1)
                     {
                         sumSecondRow += numbers[i, j];
                     }
-                    break;
-                }
-            }
-            Console.WriteLine("Сумма чисел второй строки равна: " + sumSecondRow);
 
-            for (int i = 0; i < numbers.GetLength(0); i++)
-            {
-                for (int j = 0; j < numbers.GetLength(1); j++)
-                {
-                    while (j == 0)
+                    if (j == 0)
                     {
                         multiplication *= numbers[i, j];
-                        break;
                     }
                 }
             }
+            Console.WriteLine("Сумма чисел второй строки равна: " + sumSecondRow);
             Console.WriteLine("Произведение чисел первого столбца равно: " + multiplication);
         }
     }
