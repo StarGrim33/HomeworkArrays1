@@ -6,8 +6,10 @@ namespace JuniorHomeWork
         static void Main(string[] args)
         {
             Random random = new Random();
-            int columns = random.Next(1, 10);
-            int rows = random.Next(1, 10);
+            int minNumber = 1;
+            int maxNumber = 10;
+            int columns = random.Next(minNumber, maxNumber);
+            int rows = random.Next(minNumber, maxNumber);
             int[,] numbers = new int[rows, columns];
             int sumSecondRow = 0;
             int multiplication = 1;
