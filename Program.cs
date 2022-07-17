@@ -24,22 +24,19 @@ namespace JuniorHomeWork
                 Console.WriteLine();
             }
 
-            for (int i = 1; i <= 1; i++)
+            if (rows >= 1)
             {
                 for (int j = 0; j < numbers.GetLength(1); j++)
                 {
-                    sumSecondRow += numbers[i, j];
+                    sumSecondRow += numbers[1, j];
                 }
             }
 
-            for (int i = 0; i < numbers.GetLength(0); i++)
+            if (columns >= 0)
             {
-                for (int j = 0; j < 1; j++)
+                for (int j = 0; j < numbers.GetLength(0); j++)
                 {
-                    if (j == 0)
-                    {
-                        multiplication *= numbers[i, j];
-                    }
+                    multiplication *= numbers[j, 0];
                 }
             }
             Console.WriteLine("Сумма чисел второй строки равна: " + sumSecondRow);
